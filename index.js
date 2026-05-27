@@ -1,52 +1,60 @@
-# --- 1. Estoque da Papelaria ---
-materiais = ["Caderno", "Lápis", "Borracha"]
-materiais.append("Caneta")
-materiais.append("Régua")
+// --- 1-fazendo os materiais---
+console.log("--- Exercício 1 ---");
+let materiais = ["Caderno", "Lápis", "Borracha"];
+materiais.push("Caneta");
+materiais.push("Régua");
 
-print("Estoque Atualizado da Papelaria:")
-print(materiais)
-print("-" * 30)
+console.log("Estoque Atualizado da Papelaria:");
+console.log(materiais);
+console.log("-".repeat(30));
 
-# --- 2. Controle de Chamada ---
-alunos = ["Ana", "Carlos", "João", "Maria"]
-removido = alunos.pop(0)
+// ---2- fazendo a lista de chamada ---
+console.log("--- Exercício 2 ---");
+let alunos = ["Ana", "Carlos", "João", "Maria"];
+let removido = alunos.shift(); // shift() remove o PRIMEIRO item
 
-print(f"O aluno {removido} saiu da sala.")
-print(f"Lista de chamada atual: {alunos}")
-print("-" * 30)
+console.log(`O aluno ${removido} foi removido da lista.`);
+console.log("Lista de chamada atual:", alunos);
+console.log("-".repeat(30));
 
-# --- 3. Promoção da Semana (Nova Lista) ---
-estoque_loja = ["Arroz", "Feijão", "Macarrão", "Leite", "Açúcar", "Café"]
-itens_promocao = estoque_loja[2:5]
+// --- 3-Fazendo o estoque ---
+console.log("--- Exercício 3 ---");
+let estoqueLoja = ["Arroz", "Feijão", "Macarrão", "Leite", "Açúcar", "Café"];
 
-print(f"Itens em estoque: {estoque_loja}")
-print(f"Itens selecionados para promoção: {itens_promocao}")
-print("-" * 30)
+let itensPromocao = estoqueLoja.slice(2, 5);
 
-# --- 4. Upgrade de Equipamento ---
-eletronicos = ["Mouse", "Teclado", "Monitor", "Impressora"]
-eletronicos[2] = "Notebook"
+console.log("Lista Original:", estoqueLoja);
+console.log("Itens Selecionados (Nova Lista):", itensPromocao);
+console.log("-".repeat(30));
 
-print("Lista de equipamentos atualizada:")
-print(eletronicos)
-print("-" * 30)
+// ---4- Upgrade de Equipamento ---
+console.log("--- Exercício 4 ---");
+let eletronicos = ["Mouse", "Teclado", "Monitor", "Impressora"];
+eletronicos[2] = "Notebook";
 
-# --- 5. Hortifruti (União de Listas) ---
-frutas = ["Maçã", "Banana"]
-verduras = ["Alface", "Cenoura"]
-feira_completa = frutas + verduras
+console.log("Lista de equipamentos final:");
+console.log(eletronicos);
+console.log("-".repeat(30));
 
-print(f"Setor de Frutas: {frutas}")
-print(f"Setor de Verduras: {verduras}")
-print(f"Carrinho total: {feira_completa}")
-print("-" * 30)
+// --- 5. Hortifruti  ---
+console.log("--- Exercício 5 ---");
+let frutas = ["Maçã", "Banana"];
+let verduras = ["Alface", "Cenoura"];
+// concat() ou o operador spread
+let feiraCompleta = frutas.concat(verduras);
 
-# --- 6. Boletim Escolar ---
-notas_turma = [
-    [8, 7, 9],  # Aluno 1
-    [10, 6, 8], # Aluno 2
-    [7, 9, 10]  # Aluno 3
-]
+console.log("Setor de Frutas:", frutas);
+console.log("Setor de Verduras:", verduras);
+console.log("Carrinho total:", feiraCompleta);
+console.log("-".repeat(30));
 
-print(f"Notas do Aluno 2: {notas_turma[1]}")
-print(f"Primeira nota do Aluno 3: {notas_turma[2][0]}")
+// --- 6. Boletim Escolar ---
+console.log("--- Exercício 6 ---");
+let notasTurma = [
+    [8, 7, 9],  // Aluno 1
+    [10, 6, 8], // Aluno 2
+    [7, 9, 10]  // Aluno 3
+];
+
+console.log("Notas do segundo aluno:", notasTurma[1]);
+console.log("Primeira nota do terceiro aluno:", notasTurma[2][0]);
